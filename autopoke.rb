@@ -34,7 +34,7 @@ loop do
 	print "Scanning Page: " 
 	pokes = agent.get "http://m.facebook.com/pokes"
 	puts pokes.title
-	pokes.links_with(:text => "Poke back").each do |link|
+	pokes.links_with(:text => "Poke Back").each do |link|
 		totalpokes = totalpokes +1
 		puts "Poking! " + totalpokes.to_s + " total."
 		link.click
